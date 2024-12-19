@@ -39,10 +39,40 @@ This repository demonstrates deploying a simple Node.js application on Kubernete
    EXPOSE 4000
    CMD [ "node", "index.js" ]
     ```
-2.Build the Docker image and tag the version:
+2. Build the Docker image and tag the version:
 ```
     docker build -t ak5870/nodeapp .
 ```
+3. Push the image to Docker hub
+```
+    docker push ak5870/nodeapp
+```
+4. **Create Kubernetes Resources**
+   -Create deployment.yaml:
+   ```
+   apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodeapp-deployment
+  labels:
+    app: nodeapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodeapp
+  template:
+    metadata:
+      labels:
+        app: nodeapp 
+    spec:
+      containers:
+      - name: nodeserver
+        image: thetips4you/nodeapp:latest
+        ports:
+        - containerPort: 3000
+   ```
+   
 
 
 
