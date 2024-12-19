@@ -20,7 +20,7 @@ This repository demonstrates deploying a simple Node.js application on Kubernete
 
 **Steps:**
 
-## 1.Node.js Application:
+## 1.**Node.js Application**:
    -Ensure you have a basic Node.js application (e.g., an Express server).
    -Create a package.json file with your dependencies (e.g., Express, dependencies for your application).
    -Create a Dockerfile to build your container image:
