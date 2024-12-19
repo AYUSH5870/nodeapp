@@ -47,7 +47,7 @@ This repository demonstrates deploying a simple Node.js application on Kubernete
 ```
     docker push ak5870/nodeapp
 ```
-##Create Kubernetes Resources
+## Create Kubernetes Resources
    **Create deployment.yaml**:
    ```
    apiVersion: apps/v1
