@@ -38,7 +38,7 @@ This repository demonstrates deploying a simple Node.js application on Kubernete
 
    EXPOSE 4000
    CMD [ "node", "index.js" ]
-    ```
+   ```
 ## 2.Build the Docker image and tag the version:
 ```
     docker build -t ak5870/nodeapp .
