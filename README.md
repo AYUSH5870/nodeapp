@@ -71,7 +71,7 @@ spec:
         image: thetips4you/nodeapp:latest
         ports:
         - containerPort: 3000
-   ```
+        ```
    
 
 
