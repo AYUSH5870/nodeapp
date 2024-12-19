@@ -20,7 +20,7 @@ This repository demonstrates deploying a simple Node.js application on Kubernete
 
 **Steps:**
 
-1. #Node.js Application:
+## 1.Node.js Application:
    -Ensure you have a basic Node.js application (e.g., an Express server).
    -Create a package.json file with your dependencies (e.g., Express, dependencies for your application).
    -Create a Dockerfile to build your container image:
@@ -39,16 +39,17 @@ This repository demonstrates deploying a simple Node.js application on Kubernete
    EXPOSE 4000
    CMD [ "node", "index.js" ]
     ```
-2. Build the Docker image and tag the version:
+## 2.Build the Docker image and tag the version:
 ```
     docker build -t ak5870/nodeapp .
 ```
-3. Push the image to Docker hub
+## 3.Push the image to Docker hub
 ```
     docker push ak5870/nodeapp
 ```
-## Create Kubernetes Resources
-   **Create deployment.yaml**:
+## 4.Create Kubernetes Resources
+
+   **-Create deployment.yaml**:
    ```
    apiVersion: apps/v1
    kind: Deployment
@@ -72,7 +73,7 @@ This repository demonstrates deploying a simple Node.js application on Kubernete
         ports:
         - containerPort: 3000
    ```
--Create service.yaml:
+**-Create service.yaml**:
 ```
 apiVersion: v1
 kind: Service
