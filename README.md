@@ -26,7 +26,7 @@ This repository demonstrates deploying a simple Node.js application on Kubernete
    -Create a Dockerfile to build your container image:
 
     ```
-    FROM node:latest
+   FROM node:latest
 
    WORKDIR /usr/src/app
 
@@ -39,6 +39,11 @@ This repository demonstrates deploying a simple Node.js application on Kubernete
    EXPOSE 4000
    CMD [ "node", "index.js" ]
     ```
-   
+2.Build the Docker image and tag the version:
+```
+    docker build -t ak5870/nodeapp .
+```
+
+
 
    
