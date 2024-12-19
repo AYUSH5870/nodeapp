@@ -1,5 +1,5 @@
 # nodeapp
-# My Node.js Application on Kubernetes
+# Deploying Node.js Application on Kubernetes
 
 This repository demonstrates deploying a simple Node.js application on Kubernetes.
 
@@ -12,7 +12,7 @@ This repository demonstrates deploying a simple Node.js application on Kubernete
 * **service.yaml:** Kubernetes service configuration.
 
 **Prerequisites:**
-
+* **Minikube**: You need Minikube
 * **Kubernetes Cluster:** You need a running Kubernetes cluster 
 * **kubectl:** The Kubernetes command-line tool.
 * **Docker:** Docker for building and pushing the Docker image.
@@ -89,6 +89,30 @@ spec:
     targetPort: 3000
     nodePort: 31110
 ```
+## 5.Deploy to Kubernetes
+```
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+```
+## 6.Verify the Deployment
+```
+kubectl get deployments
+```
+## 7.Check pod status:
+```
+kubectl get pods
+```
+## 8.Get service external IP(LoadBalancer):
+```
+kubectl get service nodeapp-service
+```
+## 9.Access application using the external IP
+
+
+
+
+
+
    
 
 
