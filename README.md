@@ -51,17 +51,17 @@ This repository demonstrates deploying a simple Node.js application on Kubernete
    -Create deployment.yaml:
    ```
    apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nodeapp-deployment
-  labels:
+   kind: Deployment
+   metadata:
+   name: nodeapp-deployment
+   labels:
     app: nodeapp
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
+   spec:
+    replicas: 1
+    selector:
+     matchLabels:
       app: nodeapp
-  template:
+   template:
     metadata:
       labels:
         app: nodeapp 
