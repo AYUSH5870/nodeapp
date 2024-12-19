@@ -1,5 +1,5 @@
 # nodeapp
-# Deploying Node.js Application on Kubernetes
+# Deploying Node Application on Kubernetes
 
 This repository demonstrates deploying a simple Node.js application on Kubernetes.
 
