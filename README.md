@@ -116,6 +116,11 @@ kubectl get service nodeapp-service
 ```
 
 ## 9.Access application using the external IP
+![image-1](https://github.com/user-attachments/assets/ee73357d-8217-4cec-852d-7c78549606bf)
+![image-2](https://github.com/user-attachments/assets/ab0b8d6e-16c1-4320-b203-ed47541abcfc)
+![image-3](https://github.com/user-attachments/assets/7af377a3-a426-4cb8-9c61-80ab4a15c7b6)
+
+
 
 
 
