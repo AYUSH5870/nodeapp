@@ -71,7 +71,23 @@ This repository demonstrates deploying a simple Node.js application on Kubernete
         image: thetips4you/nodeapp:latest
         ports:
         - containerPort: 3000
-        ```
+   ```
+-Create service.yaml:
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodeapp-service
+spec:
+  selector:
+    app: nodeapp 
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 3000
+    nodePort: 31110
+```
    
 
 
